@@ -1,0 +1,20 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Educational Information</h1>
+<h3>What is a reference frame?</h3>
+<p>A reference frame refers to a set of coordinates used to measure the position and other attributes of objects in space.</p>
+
+<h3>Why Geocentric Solar Magnetospheric (GSM) reference frame is selected?</h3>
+<p>The Geocentric Solar Magnetospheric (GSM) coordinate system is widely adopted in space science for its efficacy in analyzing the interactions between Earth's magnetic field and solar wind. In the GSM frame, the X-axis is directed towards the Sun, the Z-axis is aligned with Earth's magnetic axis, and the Y-axis completes the right-handed system, perpendicular to the Earth-Sun line.</p>
+<img src="{{ url_for('static', filename='gsm_frame.png') }}" alt="GSM Frame" width="500">
+
+<h3>What is magnetic reconnection and why it is important?</h3>
+<p>Magnetic reconnection is a fundamental process in plasma physics where opposing magnetic field lines converge, reconfigure, and release stored magnetic energy as kinetic and thermal energy of charged particles. This phenomenon is pivotal in understanding space weather events, as it facilitates the transfer of energy and solar wind particles into Earth's magnetosphere, potentially leading to auroras, geomagnetic storms, and disturbances in communication and navigation systems.</p>
+
+<footer>Sources:
+    Yamada, M., Kulsrud, R., & Ji, H. (2010). Magnetic reconnection. Reviews of Modern Physics, 82(1), 603–664. DOI: 10.1103/RevModPhys.82.603
+</footer>
+
+{% endblock %}

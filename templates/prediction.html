@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Classification Prediction</h2>
+<p>Enter the values for the following parameters to predict the classification:</p>
+<form action="/prediction" method="post">
+    <input type="hidden" name="prediction_type" value="classification">
+    
+    <label for="swPlasmaSpeed">SW Plasma Speed, kms</label><br>
+    <input type="text" id="swPlasmaSpeed" name="input_field" placeholder="Input value"><br>
+    
+    <label for="swPlasmaLong">SW Plasma flow long. angle</label><br>
+    <input type="text" id="swPlasmaLong" name="input_field" placeholder="Input value"><br>
+    
+    <label for="swPlasmaLat">SW Plasma flow lat. angle</label><br>
+    <input type="text" id="swPlasmaLat" name="input_field" placeholder="Input value"><br>
+    
+    <label for="eElectricField">E electric field</label><br>
+    <input type="text" id="eElectricField" name="input_field" placeholder="Input value"><br>
+    
+    <label for="plasmaBeta">Plasma Beta</label><br>
+    <input type="text" id="plasmaBeta" name="input_field" placeholder="Input value"><br>
+    
+    <label for="alfenMachNumber">Alfen mach number</label><br>
+    <input type="text" id="alfenMachNumber" name="input_field" placeholder="Input value"><br>
+    
+    <label for="dstIndex">Dst-index, nT</label><br>
+    <input type="text" id="dstIndex" name="input_field" placeholder="Input value"><br>
+    
+    <input type="submit" value="Predict Classification">
+</form>
+
+<h2>Forecasting Prediction</h2>
+<p>Enter the values for the following parameters to predict the forecasting:</p>
+<form action="/prediction" method="post">
+    <input type="hidden" name="prediction_type" value="forecasting">
+    
+    <label for="bx">BX, nT (GSM)</label><br>
+    <input type="text" id="bx" name="input_field" placeholder="Input value"><br>
+    
+    <label for="by">BY, nT (GSM)</label><br>
+    <input type="text" id="by" name="input_field" placeholder="Input value"><br>
+    
+    <label for="bz">BZ, nT (GSM)</label><br>
+    <input type="text" id="bz" name="input_field" placeholder="Input value"><br>
+    
+    <label for="swPlasmaSpeedF">SW Plasma Speed, km/s</label><br>
+    <input type="text" id="swPlasmaSpeedF" name="input_field" placeholder="Input value"><br>
+    
+    <label for="swPlasmaLongF">SW Plasma flow long. angle</label><br>
+    <input type="text" id="swPlasmaLongF" name="input_field" placeholder="Input value"><br>
+    
+    <label for="swPlasmaLatF">SW Plasma flow lat. angle</label><br>
+    <input type="text" id="swPlasmaLatF" name="input_field" placeholder="Input value"><br>
+    
+    <label for="eElectricFieldF">E (electric field)</label><br>
+    <input type="text" id="eElectricFieldF" name="input_field" placeholder="Input value"><br>
+    
+    <label for="plasmaBetaF">Plasma Beta</label><br>
+    <input type="text" id="plasmaBetaF" name="input_field" placeholder="Input value"><br>
+    
+    <label for="alfenMachNumberF">Alfen mach number</label><br>
+    <input type="text" id="alfenMachNumberF" name="input_field" placeholder="Input value"><br>
+    
+    <label for="dstIndexF">Dst-index, nT</label><br>
+    <input type="text" id="dstIndexF" name="input_field" placeholder="Input value"><br>
+    
+    <input type="submit" value="Predict Forecasting">
+</form>
+{% endblock %}
